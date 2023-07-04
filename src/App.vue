@@ -3,12 +3,17 @@
       height: '100vh',
       width: '100vw'
     }">
-    <VueFlow v-model="elements" />
+    <VueFlow class="basicflow" v-model="elements" >
+      <Background pattern-color="#aaa" gap="8" />
+      <MiniMap />
+    </VueFlow>
   </div>
 </template>
 <script setup>
   import { ref } from 'vue'
   import { VueFlow  } from '@vue-flow/core'
+  import { MiniMap } from '@vue-flow/minimap'
+  import { Background } from '@vue-flow/background'
   const elements = ref([
   // Nodes
   // An input node, specified by using `type: 'input'`
